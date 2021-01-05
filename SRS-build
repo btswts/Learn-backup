@@ -1,0 +1,21 @@
+UBUNTU 的话， sudo apt-get install git     选 安装GIT
+
+安装报错少部件的话， sudo apt-get install XXXXX
+
+官方SRS地址 https://github.com/ossrs/srs  看里面的教程，当然下面的也写出来了
+
+git clone https://github.com/ossrs/srs.git && cd srs/trunk
+
+./configure && make
+
+./objs/srs -c conf/03srs.conf        （03srs.conf自己下载https://github.com/btswts/Learn-backup/blob/main/03srs.conf）
+
+自己注意防火墙端口有没有开
+
+然后推流软件上面 手机上填   rtmp://IP/app/livestream   (app  livestream 可自行改成其他名字)
+
+OBS  PC端推流的话， FMS URL 填 rtmp://IP/app  （app自行更改，也可不改）  播放路径/串码流 自己填个英文名字
+
+然后  VLC 拉流之类的客户端  就是 rtmp://IP/app/livestream   拉流播放。
+
+至于服务端里面的MP4  请自行用SSH FTP 下载下来。
